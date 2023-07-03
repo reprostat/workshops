@@ -1,2 +1,3 @@
-# workshop
-Neuroimaging and neuroinformatics workshops
+# BIDS workshop
+Workshops on organising and sharing neuroimaging data using BIDS
+
