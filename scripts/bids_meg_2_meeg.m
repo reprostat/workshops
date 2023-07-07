@@ -54,9 +54,9 @@ end
 
 %% Correct for validator
 % dataset
-json = ft_read_json(fullfile(BIDSDIR,'dataset_description.json'));
+json = bids.util.jsondecode(fullfile(BIDSDIR,'dataset_description.json'));
 json.GeneratedBy = {json.GeneratedBy};
-ft_write_json(fullfile(BIDSDIR,'dataset_description.json'),json);
+bids.util.jsonwrite(fullfile(BIDSDIR,'dataset_description.json'),json);
 
 % electrodes.tsv
 writecell({'*_electrodes.tsv'},fullfile(BIDSDIR,'.bidsignore.txt'));
